@@ -1,0 +1,26 @@
+1.Amounts Mismatch issues(Mode Updation issue    ,credit to debit debit to credit)
+
+2.HTML Header Report should be Same as SSRS Report.
+
+3.Loyality Module Creation.
+
+4.Consumption new report.Need to discuss with Subbarao sir at 3:PM.
+
+5.Department wise net billing Grand total not coming
+
+6.Rolling Advance concept.
+
+7.Temparory Limit for credit client. 
+
+8.Automation of Invoice in Clientbilling for example Manchiriyal.
+
+9.Co Payment in Company Master.
+
+10.Need a Report for Prescription Upload data 
+11.Daily Collection report, Collection is done in other location but collection is displaying both locations
+
+12.Tally Integration.
+
+13.Mobile Merging
+
+14.Upload Tariff Not Displaying in All Lab screens.

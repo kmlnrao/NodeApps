@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Test Report</title>
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 10pt;
+            font-family: Times New Roman !important;
+            padding: 0;
+            margin: 0px 35pt;
+
+        }
+       
+        /* @media print {
+            .print-button {
+                display: none;
+            }
+            
+            .content div {
+                break-after: always;
+            }
+        } */
+
+        @media print {
+        .page {
+            page-break-after: always;
+            width: 100%;
+            margin: 0;
+        }
+    }
+    
+       .page-break {
+        page-break-after: auto;
+        width: 100%;
+            margin: 0;
+       }
+        .reporttitle {
+            font-size: 13pt;
+            text-decoration: underline;
+            font-family: Times New Roman;
+            text-align: center;
+            margin: 0 0 15px 0px;
+        }
+        div,
+        h1,
+        h2,
+        h3,
+        p,
+        span {
+            padding: 0;
+            margin: 0;
+        }
+
+        td {
+            vertical-align: top
+        }
+
+        div,
+        p,
+        span,
+        td {
+            font-size: 10pt;
+            font-family: Times New Roman !important;
+        }
+        .test-table{width: 100%;}   
+        .srvname{margin:0 0 8px 0; padding: 0px; font-size: 18px; text-align: center; text-decoration: underline;}
+        .test-table td{padding-bottom: 5px;}
+        </style>
+</head>
+
+<body>
+    <div>
+        <!-- <h1  class="reporttitle"> </h1> -->
+    </div>
+    <div id="normalreport">
+        {{#each this}}
+            {{#ifEquals this.SRV_FLAG 'Y' }}
+                {{#if @first }}
+
+                {{else}}
+                
+
+                    <div>
+                        <table class="signature" align="right">
+                            <tr>
+                                <td>
+                                    <img src="http://103.145.36.189/his/private/doctorsignature/{{this.DOCTOR_SIGNATURE}}" width="80px"> </img>
+                                    <p> {{ this.DOCTOR_NAME }} </p>
+                                    <p> {{ this.QUALIFICATION_NAME }} </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="text-align: center;"><strong>***End of the Report***</strong></div>
+                    <div style="page-break-after: always !important;"></div> 
+                {{/if}}
+                
+                <div><h1 class="srvname"> {{ this.SERVICE_NAME }} </h1></div>
+                {{/ifEquals}}
+                
+                {{#ifEquals this.SRV_FLAG 'Y' }}
+                <table id="example1" class="test-table" border="0" cellpadding="0"  width="100%">
+            
+                  
+                <thead class="thead">
+                
+                    <tr class="thead">
+                        <th align="left" width="35%">TEST NAME</th>
+                        <th align="right"  width="13%" style="padding-right: 30px;">RESULT</th>
+                        <!--  <th>UNITS</th>-->
+                        <th align="left" width="auto">BIOLOGICAL REFERENCE INTERVAL</th>
+                    </tr>
+                
+                </thead>
+                </table>
+                {{/ifEquals}}
+
+            <table id="example" class="test-table" border="0" cellpadding="0" width="100%">
+            
+               
+                <tbody>
+                 
+                    <tr>
+                        <td align="left" width="35%"><div>{{this.PARAMETERS}} </div><label><i>{{this.METHODS}}</i></label></td>
+                        <td align="right" width="13%" style="padding-right: 30px;">{{this.RESULT_VALUE}}</td>
+                        <td align="left" width="auto">
+                            <div> {{{this.NORMAL_VALUE}}}&nbsp;&nbsp;{{ this.UOM_NAME }}</div>
+                        </td>
+                        
+                    </tr>
+                    
+                    {{#ifEquals this.SRV_FLAG 'Y' }}
+                    
+                    {{/ifEquals}}
+                </tbody>
+            </table>
+        {{/each}}
+ 
+    </div>
+    
+    <div>
+        <table class="signature" align="right">
+            <tr>
+                <td>
+                    <img src="http://103.145.36.189/his/private/doctorsignature/{{this.[0].DOCTOR_SIGNATURE}}" width="80px"> </img>
+                    <p> {{ this.[0].DOCTOR_NAME }} </p>
+                    <p> {{ this.[0].QUALIFICATION_NAME }} </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="text-align: center;"><strong>***End of the Report***</strong></div>
+
+</body>
+</html>

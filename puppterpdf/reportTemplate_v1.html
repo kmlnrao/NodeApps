@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+  .srvname{margin:0 0 8px 0; padding: 0px; font-size: 18px; text-align: center; text-decoration: underline;}
+.resulttbl{display: flex; margin-bottom: 4px;}
+.resulttbl label{flex:1; vertical-align: top;}
+.resultbody{padding: 0 30px;}
+  </style>
+</head>
+
+<body>
+
+
+  <div id="normalreport">
+    <div id="example" class="resultbody">
+      {{#each this}}
+
+      {{#ifEquals this.FLAG 'Y' }}
+      {{#if @first }}
+
+      {{else}}
+        <div style="page-break-after: always !important;"></div> 
+        <div class="resulttbl" style="display: flex; ">
+          <label><b>TEST NAME</b></label>
+          <label ><b>RESULT</b></label>
+          <!--  <th>UNITS</th>-->
+          <label ><b>BIOLOGICAL REFERENCE INTERVAL</b></label>
+        </div>
+      {{/if}}
+      <div><h1 class="srvname"> {{ this.SERVICE_NAME }} : {{ @index }}</h1>
+      </div>
+      {{/ifEquals}}
+
+      {{#if @first }}
+        <div class="resulttbl" style="display: flex; ">
+          <label><b>TEST NAME</b></label>
+          <label ><b>RESULT</b></label>
+          <!--  <th>UNITS</th>-->
+          <label ><b>BIOLOGICAL REFERENCE INTERVAL</b></label>
+        </div>
+      {{/if}}
+
+     <div class="resulttbl" style="display: flex; ">
+        <label> {{this.PARAMETERS}}</label>
+        <label>{{this.RESULT_VALUE}}</label>
+        <label> {{{this.NORMAL_VALUE}}} {{ this.UOM_NAME }} {{ this.FLAG }} </label>
+      </div>
+
+      {{#ifEquals this.FLAG 'Y' }}
+      {{/ifEquals}}
+    
+      {{/each}}
+
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+ 
+  <div id="normalreport">
+    <div id="example">
+      {{#each this}}
+      <div><u> {{ this.SERVICE_NAME }} : {{ @index }}</u></strong></center>
+      </div>
+      <div>
+        {{this.PARAMETERS}}</td>
+        <label>{{this.RESULT_VALUE}}</label>
+        <div> {{{this.NORMAL_VALUE}}}&nbsp;&nbsp;{{ this.UOM_NAME }}</div>
+      </div>
+      <div style="page-break-after: always !important;"></div>
+      {{/each}}
+
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+date:15th March 2023, 9:05:25 pm 
+method:postmethod
+Headers:{"content-type":"application/json","user-agent":"PostmanRuntime/7.31.1","accept":"*/*","cache-control":"no-cache","postman-token":"02902b8a-8b66-4b66-997d-4d81385d6c58","host":"localhost:9002","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"45"} 
+body:{"key":"name","value":"satish"}
+Response:{"key":"name","value":"satish"}
+
+date:15-March-2023, 9:05 pm 
+method:postmethod
+Headers:{"content-type":"application/json","user-agent":"PostmanRuntime/7.31.1","accept":"*/*","cache-control":"no-cache","postman-token":"3f09dd0b-0177-4732-9e38-eee751392db8","host":"localhost:9002","accept-encoding":"gzip, deflate, br","connection":"keep-alive","content-length":"45"} 
+body:{"key":"name","value":"satish"}
+Response:{"key":"name","value":"satish"}

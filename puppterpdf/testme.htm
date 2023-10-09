@@ -1,0 +1,32 @@
+<table id="example">
+    {{#each users}}  
+       <thead class="thead">
+           <tr class="thead" > 
+           </tr>
+           <tr class="thead">
+               <th align="left">TEST NAME</th>
+               <th align="right" style="padding-right: 30px;">RESULT</th>
+               <!--  <th>UNITS</th>-->
+               <th align="left">BIOLOGICAL REFERENCE INTERVAL</th>
+           </tr>
+       </thead>
+     <tbody>
+        
+          <tr>
+             <td align="left" width="35%">{{PARAMETERS}}</td>
+             <td  align="right" width="13%"  style="padding-right: 30px;">{{RESULT_VALUE}}</td>
+             <td  align="left" width="auto">
+             <!-- <div> {{this.NORMAL_VALUE}}&nbsp;&nbsp;{{ users.[@index].UOM_NAME }} </div>  -->
+             <div> {{{NORMAL_VALUE}}}&nbsp;&nbsp;{{ UOM_NAME }} </div> 
+             <!-- <div> NORMAL_RANGES {{ @index }} </div>  -->
+             </td>
+       </tr>
+ <tr>
+     <td colspan="3">{{METHODS}}</td>
+     </td>
+ </tr>
+
+ <tr>{{{ INTERPRETATION}}}  </tr>
+ </tbody>
+ {{/each}}
+ </table>

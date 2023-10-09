@@ -1,0 +1,6 @@
+2022/03/04 07:20:26 [emerg] 8064#8844: SSL_CTX_use_PrivateKey("C:\nginx\ssl\emraayush.com.key") failed (SSL: error:0B080074:x509 certificate routines:X509_check_private_key:key values mismatch)
+2022/03/04 07:20:28 [emerg] 7592#9456: SSL_CTX_use_PrivateKey("C:\nginx\ssl\emraayush.com.key") failed (SSL: error:0B080074:x509 certificate routines:X509_check_private_key:key values mismatch)
+2022/03/04 07:20:32 [emerg] 7672#8632: SSL_CTX_use_PrivateKey("C:\nginx\ssl\emraayush.com.key") failed (SSL: error:0B080074:x509 certificate routines:X509_check_private_key:key values mismatch)
+2022/03/04 07:20:40 [emerg] 2696#7912: SSL_CTX_use_PrivateKey("C:\nginx\ssl\emraayush.com.key") failed (SSL: error:0B080074:x509 certificate routines:X509_check_private_key:key values mismatch)
+2022/03/04 07:20:56 [emerg] 4108#5772: SSL_CTX_use_PrivateKey("C:\nginx\ssl\emraayush.com.key") failed (SSL: error:0B080074:x509 certificate routines:X509_check_private_key:key values mismatch)
+2022/03/04 07:26:05 [error] 764#8344: OCSP_basic_verify() failed (SSL: error:27069076:OCSP routines:OCSP_basic_verify:signer certificate not found) while requesting certificate status, responder: ocsp.digicert.com, peer: 117.18.237.29:80, certificate: "C:\nginx\ssl\emraayush_com.crt"

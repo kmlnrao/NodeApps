@@ -1,0 +1,364 @@
+<html>
+  <head>
+    <style type="text/css">
+        @media print {
+            body {
+                font-size: 9pt;
+                font-family: Times New Roman !important;
+                padding: 0;
+                margin: 0;
+            }
+
+            div,
+            p,
+            span,
+            td {
+                font-size: 9pt !important;
+            }
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 9pt;
+            font-family: Times New Roman !important;
+            padding: 0;
+            margin: 0px 0; 
+         
+         
+        }
+
+        .lbltitle {
+            font-size: 11pt !important;
+            font-family: Times New Roman !important;
+            border-top: px solid #000;
+        }
+
+        div,
+        h1,
+        h2,
+        h3,
+        p,
+        span {
+            padding: 0;
+            margin: 0;
+        }
+
+        td {
+            vertical-align: top
+        }
+
+        p {
+            text-align: justify
+        }
+
+        div,
+        p,
+        span,
+        td {
+            font-size: 9pt;
+            font-family: Times New Roman !important;
+        }
+
+        .divheader,
+        .header {
+            margin: 0;
+            padding: 0px 0 0px 0 !important;
+            font-family: Times New Roman !important;
+            position: relative;
+        }
+
+        .divheader img.qrcodeimg {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            height: 60px;
+            width: 60px;
+            padding: 20px;
+        }
+
+        .lbltitle {
+            font-weight: 700;
+            border-bottom: 4px solid #000;
+            text-align: center;
+            padding-bottom: 0;
+            width: 400px;
+            border-left: 1px solid #000;
+            margin: 0 auto;
+            border-right: 4px solid #000;
+            border-top: 1px solid #000;
+            font-size: 12pt !important;
+            font-family: Times New Roman !important;
+            border-top: 1px solid #000;
+            text-align: center;
+        }
+
+        .lbltitle span {
+            display: block;
+        }
+
+        .pdetails {
+            border-bottom: 2px solid #000;
+            position: relative;
+        }
+        .pdetails table {width: 100%;}
+        .pdetails table td {
+            padding: 4px 0;
+        }
+
+        .pdetails table td,
+        .pdetails table td span {
+            font-size: 9pt;
+            font-family: Times New Roman !important;
+        }
+
+        .col-1 {
+            width: 100px;
+        }
+
+        .col-2,
+        .col-5,
+        .col-8 {
+            width: 10px;
+        }
+
+        .col-3 {
+            width: 250px;
+        }
+
+        .col-4 {
+            width: 130px;
+        }
+
+        .col-6 {
+            width: 160px;
+            
+        }
+
+        .col-7 {
+            width: 110px;
+            padding: 0;
+            position: relative;
+        }
+
+        .col-img {
+            width: 100px;
+        }
+
+        .col-9 {
+            width: 210px;
+        }
+
+        .histopathology #HistoData {
+            display: block;
+        }
+
+        #headerimg {
+            width: 100%;
+        }
+
+       
+
+        .heder-text {
+            margin-bottom: 15px;
+        }
+
+        .header-text-center {
+            padding: 5px 0px 35px 50px;
+            text-align: right;
+        }
+
+        .pdetails table {
+            margin-top: 0px;
+            border: 0px;
+            width: 100%;
+        }
+
+        .lblhdrtxt {
+            text-align: right;
+        }
+
+        .lblhdrtxt-1 {
+            text-align: right;
+            display: block;
+        }
+      #header {
+        padding: 0;
+      }
+      .content {
+        width: 100%;
+       
+        padding: 0px;
+        -webkit-print-color-adjust: exact;
+        vertical-align: middle;
+      
+        margin: 20px 30pt 0 27pt; 
+        display: inline-block;
+        
+      }
+      .title {
+        font-weight: bold;
+      }
+      .date {
+        text-align:right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="header">
+        <div class="heder-text">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td align="left">
+                            Processing Location :
+                        </td>
+                        <td align="right">
+                            H.No:- 6-2-301 &amp; 302, Pinjarla Street, Near Vijaya Talkies
+                            Road, Hanmakonda,<br>
+                            Telangana-506001 <br> Email: warangal@luciddiagnostics.com
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="pdetails">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td class="col-1">
+                            Reg. Date
+                        </td>
+                        <td class="col-2">
+                            :
+                        </td>
+                        <td class="col-3">
+                           {{ this.[0].BILL_DATE }}
+                        </td>
+                        <td id="tdsmcol" class="col-4">
+                            <label id="tdsmcl">
+
+                                Sample Collection
+                            </label>
+                        </td>
+
+                        <td class="col-5">
+                            <label id="tdsmclcol"> :</label>
+                        </td>
+                        <td class="col-6">
+                            <div id="tdsmcldt">
+                                <span id="lblcolldt" class="lbl_brd">11-Jun-2020 06:03</span>
+                            </div>
+                        </td>
+
+                        <td rowspan="4" class="col-img" align="center">
+                         
+                            <!-- <img src="http://103.145.36.189/his/private/doctorsignature/3c941316-6309-4d6c-a71f-d79b6e75d78eDr Shruti.PNG" width="50px"> -->
+                            <!-- <img src="images/logo.png" width="50px"> -->
+                            <img src="{{this.[0].QRCODEIMAGE}}" width="60px">
+
+
+                       </td>
+
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            Name
+                        </td>
+                        <td class="col-2">
+                            :
+                        </td>
+                        <td class="col-3">
+                           <b> {{ this.[0].PATIENT_NAME }}</b>
+                        </td>
+                        <td class="col-4">
+                            Print Date
+                        </td>
+                        <td class="col-5">
+                            :
+                        </td>
+                        <td class="col-6" colspan="2">
+                            {{ this.[0].REPORT_DATE }}  
+                        </td>
+
+
+
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            UMR#
+                        </td>
+                        <td class="col-2">
+                            :
+                        </td>
+                        <td class="col-3">
+                            {{ this.[0].UMR_NO }}    
+                        </td>
+                        <td class="col-4">
+                            Age / Gender
+                        </td>
+                        <td class="col-5">
+                            :
+                        </td>
+                        <td class="col-6" colspan="2">
+                            <b>{{ this.[0].AGE }}</b>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            Ref.By
+                        </td>
+                        <td class="col-2">
+                            :
+                        </td>
+                        <td class="col-3">
+                            {{ this.[0].REFERAL }} 
+                        </td>
+                        <td class="col-4">
+                            Reg. Centre
+                        </td>
+                        <td class="col-5">
+                            :
+                        </td>
+                        <td class="col-6" colspan="2">
+                            {{ this.[0].LOCATION_NAME }}  
+                        </td>
+                    </tr>
+                    <tr id="trsampletype">
+                        <td id="lblSpltyp" class="col-1" colspan="1">
+                            Sample Type
+                        </td>
+                        <td id="lblSpcol" class="col-2">
+                            :
+                        </td>
+                        <td id="lblSp" class="col-3">
+                            <span id="lblSpecType" class="lbl_brd"></span>
+                        </td>
+                        <td id="lblSRef" class="col-4">
+                            Ref no.
+                        </td>
+                        <td id="lblSpRef" class="col-5">
+                            :
+                        </td>
+                        <td id="lblSpltRef" class="col-6" colspan="2">
+                            <span id="Label10"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <!-- <span class="title"></span>
+        <span class="date"></span> -->
+        <!-- <span class="url"></div> -->
+    </div>
+  </body>
+</html>
